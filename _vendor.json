@@ -11,13 +11,15 @@
 			"bower_components/object-fit-images/dist/ofi.browser.js",
 			"bower_components/lazysizes/lazysizes.js",
 			"_vendor/ls.unveilhooks.min.js",
-			"bower_components/swiper/dist/js/swiper.js"
+            "bower_components/swiper/dist/js/swiper.js",
+            "bower_components/fancybox/dist/jquery.fancybox.js"
 		],
 		"css": [
 			"_vendor/font.css",
 			"_vendor/grid.css",
 			"_vendor/loading.css",
-			"bower_components/swiper/dist/css/swiper.min.css"
+            "bower_components/swiper/dist/css/swiper.min.css",
+            "bower_components/fancybox/dist/jquery.fancybox.css"
 		]
 	}
 }

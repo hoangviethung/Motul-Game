@@ -1,7 +1,30 @@
-.about-competition {
-    .title-about {
-        margin-top: 107px;
+.home-section-2 {
+    position: relative;
+    overflow: hidden;
+    padding : 107px 0 123px;
 
+    &::before {
+        content         : '';
+        position        : absolute;
+        top             : -490px;
+        left            : -340px;
+        width           : 721px;
+        height          : 1247px;
+        background-image: url(../img/bg-before.png);
+    }
+
+    &::after {
+        content         : '';
+        position        : absolute;
+        bottom          : -325px;
+        right           : 0;
+        width           : 678px;
+        height          : 989px;
+        background-image: url(../img/bg-before.png);
+        object-fit      : cover;
+    }
+
+    .title-about {
         h5 {
             display        : inline-block;
             font-size      : 46px;
@@ -25,6 +48,82 @@
                 color      : #ED1D24;
                 font-weight: 900;
             }
+        }
+    }
+
+
+
+    .box-guide {
+        position  : relative;
+        margin-top: 43px;
+        padding   : 65px 90px;
+        background: #000;
+        border    : 10px solid #ED1D24;
+        width     : 100%;
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+
+        .title-guide {
+            h3 {
+                font-size  : 60px;
+                font-weight: 800;
+                color      : #ED1D24;
+                text-align : center;
+            }
+        }
+
+        .desciption-guide {
+            h5.step {
+                font-size      : 24px;
+                font-weight    : 800;
+                color          : #ED1D24;
+                text-decoration: underline;
+                margin-bottom  : 15px;
+            }
+
+            p {
+                color        : #FFFFFF;
+                font-size    : 24px;
+                margin-bottom: 24px;
+            }
+
+            h3 {
+                font-size    : 24px;
+                color        : #fff;
+                font-weight  : 800;
+                margin-bottom: 40px;
+            }
+
+            span {
+                display   : inline-block;
+                font-size : 22px;
+                color     : #fff;
+                font-style: italic;
+            }
+
+            button {
+                display    : block;
+                margin     : 100px auto 0;
+                border     : none;
+                line-height: 95px;
+                background : #ED1D24;
+                padding    : 0 85px;
+                font-size  : 34px;
+                font-weight: 800;
+                color      : #ffF;
+            }
+        }
+
+        &::after {
+            content         : '';
+            position        : absolute;
+            display         : block;
+            background-image: url(../../../img/home/bg-box-guide.png);
+            width           : 761px;
+            height          : 381px;
+            bottom          : 180px;
+            left            : 50%;
+            transform       : translateX(-50%);
+            pointer-events  : none;
         }
     }
 }

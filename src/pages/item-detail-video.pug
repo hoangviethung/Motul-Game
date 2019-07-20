@@ -28,7 +28,8 @@ block main
 						.title-story
 							h3 Câu chuyện đường đua
 							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dol. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-							button CHỈNH SỬA BÀI DỰ THI
+							a(href="#")
+								button CHỈNH SỬA BÀI DỰ THI
 				.col-5.list-same-item
 					.same-item
 						figure
@@ -39,8 +40,13 @@ block main
 								.button-play-video
 									a(href="#")
 										img(src="../img/icons/button_play_video.png", alt="", srcset="")
-					.formSubmitLink
-						form(action="#")
-							label(for="") VIDEO BẢO TRÌ XE
-							input(type="text", name="", placeholder="Nhập link video của bạn")
-							button XÁC NHẬN
+					.same-item.video-404
+						figure
+							figcaption
+								h5 VIDEO BẢO TRÌ XE
+							.box-img
+								img(src="", alt="", srcset="")
+								.button-play-video
+									a(href="#")
+										img(src="../img/icons/button_play_video.png", alt="", srcset="")
+					a.back-page(href="#") QUAY LẠI

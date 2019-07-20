@@ -1,0 +1,50 @@
+// THANH NÚT PHÂN TRANG
+.pagination {
+    width     : 100%;
+    margin-top: 10px;
+
+    .list-number {
+        display        : flex;
+        justify-content: center;
+        position       : relative;
+
+        &:after {
+            content         : '';
+            display         : block;
+            position        : absolute;
+            width           : 5px;
+            height          : 10px;
+            top             : 50%;
+            transform: translateY(-50%);
+            right           : 390px;
+            background-image: url('../img/icons/pagination_next.png');
+        }
+
+        &:before {
+            content         : '';
+            display         : block;
+            position        : absolute;
+            width           : 5px;
+            height          : 10px;
+            top             : 50%;
+            transform: translateY(-50%);
+            left            : 390px;
+            background-image: url('../img/icons/pagination_prev.png');
+        }
+
+        .item {
+            padding: 0 20px;
+
+            a {
+                font-size: 14px;
+                color    : #808080;
+
+                &.active {
+                    color     : #ED1D24;
+                    background: #fff;
+                    padding   : 14px 8px;
+                }
+            }
+        }
+    }
+}
