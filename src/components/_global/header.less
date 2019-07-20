@@ -1,0 +1,39 @@
+header {
+    padding   : 15px 0;
+    background: #191919;
+
+    .container {
+        .list-menu {
+            height     : 100%;
+            display    : flex;
+            margin-left: auto;
+
+            .item-menu {
+                padding   : 0 5px;
+                flex-basis: 0;
+                flex-grow : 1;
+                width     : 228px;
+
+                a {
+                    display       : block;
+                    text-align    : center;
+                    text-transform: uppercase;
+                    font-weight   : bold;
+                    line-height   : 60px;
+                    color         : #FFFFFF;
+                    font-size     : 14px;
+                    background    : #353535;
+                    width         : 100%;
+                    transition    : .3s all ease-in-out;
+                }
+
+                &:hover {
+                    a {
+                        background: #ED1D24;
+                    }
+                }
+            }
+        }
+    }
+
+}

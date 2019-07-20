@@ -1,0 +1,45 @@
+extends _layout.pug
+
+block var
+	- var title = 'Sửa Bài Viết'
+	- var bodyClass = 'repair-post-page'
+
+block main
+	section.item-detail
+		.container
+			.title
+				span HÀNH TRÌNH CỦA:
+				h3 PHAN GIA CÁT NHẬT LINH
+			.row
+				.col-7.main-item
+					figure
+						.box-img
+							img(src="../img/item-detail/item-01.png", alt="", srcset="")
+							.icon-vote
+								.heart-full
+								.heart-nofull
+						figcaption
+							.date
+								span 24/02/2020
+							.number-vote
+								p 50
+								span vote
+					.story-racetrack
+						.title-story
+							h3 Câu chuyện đường đua
+							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dol. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+							button CHỈNH SỬA BÀI DỰ THI
+				.col-5.same-item
+					figure
+						figcaption
+							h5 VIDEO HÀNH TRÌNH
+						.box-img
+							img(src="../img/item-detail/item-02.png", alt="", srcset="")
+							.button-play-video
+								a(href="#")
+									img(src="../img/icons/button_play_video.png", alt="", srcset="")
+					.formSubmitLink
+						form(action="#")
+							label(for="") VIDEO BẢO TRÌ XE
+							input(type="text", name="", placeholder="Nhập link video của bạn")
+							button XÁC NHẬN

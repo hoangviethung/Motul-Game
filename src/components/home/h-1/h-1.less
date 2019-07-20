@@ -1,0 +1,177 @@
+.home-section-1 {
+	position  : relative;
+	background: #F2F2F2;
+	padding   : 115px 0;
+
+	&::before {
+		content         : '';
+		position        : absolute;
+		bottom          : 0;
+		left            : 0;
+		width           : 721px;
+		height          : 1247px;
+		background-image: url(../img/bg-before.png);
+	}
+
+	&::after {
+		content         : '';
+		position        : absolute;
+		top             : 0;
+		right           : 0;
+		width           : 678px;
+		height          : 989px;
+		background-image: url(../img/bg-before.png);
+		object-fit      : cover;
+	}
+
+	.title-main {
+		margin: 0 auto;
+
+		figure {
+			img {
+				max-width : 457px;
+				max-height: 111px;
+			}
+
+			figcaption {
+				h1 {
+					font-weight: 900;
+					font-size  : 95px;
+					color      : #ED1D24;
+				}
+			}
+		}
+	}
+
+	.list-item-about-racetrack {
+		display    : flex;
+		align-items: center;
+		margin : 60px 0;
+
+		.item-about-racetrack {
+			&.active {
+				figure {
+					figcaption {
+						padding: 55px 23px 63px;
+
+						h5 {
+							font-size: 30px;
+							width    : 100%;
+						}
+
+						p {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+
+			figure {
+				position        : relative;
+				padding         : 10px;
+				background-image: linear-gradient(to bottom, rgba(25, 25, 25, 1), rgba(237, 29, 36, 1));
+
+				.box-img {
+					display: flex;
+
+					img {
+						width : 100%;
+						height: auto;
+					}
+				}
+
+				figcaption {
+					background: rgba(0, 0, 0, .8);
+					padding   : 15px 23px 72px;
+					position  : relative;
+
+					&::before {
+						content         : '';
+						position        : absolute;
+						top             : 0;
+						left            : 0;
+						width           : 100%;
+						height          : 100%;
+						background-image: url(../img/bg-page.png);
+					}
+
+					h5 {
+						width        : 90%;
+						text-align   : center;
+						margin       : 0 auto;
+						font-weight  : 800;
+						font-size    : 24px;
+						color        : #ED1D24;
+						margin-bottom: 25px;
+					}
+
+					p {
+						color    : #fff;
+						font-size: 18px;
+
+						span {
+							color      : #ED1D24;
+							font-weight: 700;
+						}
+					}
+
+					.list-info-racetrack {
+						padding-left: 20px;
+						font-size   : 18px;
+
+						.item {
+							position    : relative;
+							padding-left: 20px;
+							color       : #fff;
+
+							&::before {
+								content      : "";
+								position     : absolute;
+								display      : block;
+								width        : 7px;
+								height       : 7px;
+								border-radius: 50%;
+								left         : 0;
+								top          : 50%;
+								transform    : translateY(-50%);
+								background   : #ED1D24;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.description-main {
+		display: block;
+		width  : 100%;
+
+		figure {
+			.box-img {
+				display        : flex;
+				justify-content: center;
+
+				img {
+					max-width : 800px;
+					max-height: 265px;
+				}
+			}
+
+			figcaption {
+				text-align: center;
+
+				h3 {
+					font-weight: 900;
+					font-size  : 46px;
+					color      : #000000;
+
+					span {
+						font-size: 64px;
+						color    : #ED1D24;
+					}
+				}
+			}
+		}
+	}
+}

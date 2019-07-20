@@ -1,0 +1,204 @@
+.item-detail {
+	background-image   : url(../../img/bg-page.png);
+	background-size    : cover;
+	background-position: center;
+	background-repeat  : no-repeat;
+	background         : #F2F2F2;
+	padding            : 65px 0 55px;
+
+	.main-item {
+		figure {
+			border    : 5px solid #fff;
+			box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+
+			.box-img {
+				position: relative;
+
+				img {
+					width: 100%;
+				}
+
+				.icon-vote {
+					position: absolute;
+					bottom  : 25px;
+					right   : 30px;
+					width   : 30px;
+					height  : 30px;
+
+					.heart-full,
+					.heart-nofull {
+						background-position: center;
+						background-size    : 100%;
+						background-repeat  : no-repeat;
+					}
+
+					.heart-full {
+						background-image: url(../img/icons/heart-full.jpg.png);
+						position        : absolute;
+						bottom          : 0px;
+						left            : 0;
+						width           : 0;
+						height          : 100%;
+					}
+
+					.heart-nofull {
+						background-image: url(../img/icons/heart-nofull.png);
+						width           : 100%;
+						height          : 100%;
+					}
+				}
+			}
+
+			figcaption {
+				display   : flex;
+				background: #fff;
+				padding   : 25px 0 20px;
+
+				.date {
+					span {
+						font-size: 24px;
+						color    : #000000;
+					}
+				}
+
+				.number-vote {
+					margin-left: auto;
+
+					p {
+						display      : inline-block;
+						padding-right: 7px;
+						font-weight  : bold;
+						font-size    : 24px;
+						color        : #ED1D24;
+					}
+
+					span {
+						font-size: 24px;
+						color    : #000000;
+					}
+				}
+			}
+		}
+
+		.story-racetrack {
+			margin-top: 55px;
+
+			.title-story {
+				h3 {
+					font-size      : 24px;
+					font-style     : italic;
+					text-decoration: underline;
+					color          : #000000;
+					margin-bottom  : 30px;
+				}
+
+				p {
+					font-size         : 16px;
+					color             : #808080;
+					max-height        : 96px;
+					overflow          : hidden;
+					text-overflow     : ellipsis;
+					display           : -webkit-box;
+					-webkit-line-clamp: 4;
+					-webkit-box-orient: vertical;
+				}
+
+				button {
+					margin-top : 55px;
+					border     : none;
+					background : #000000;
+					box-shadow : 0 0 7px rgba(0, 0, 0, 0.1);
+					color      : #fff;
+					line-height: 45px;
+					height     : 45px;
+					padding    : 0 100px;
+				}
+			}
+		}
+	}
+
+	.same-item {
+		figure {
+			figcaption {
+				h5 {
+					font-size    : 18px;
+					color        : #000000;
+					margin-bottom: 25px;
+					padding-left : 25px;
+				}
+			}
+
+			.box-img {
+				position  : relative;
+				border    : 5px solid #fff;
+				box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+
+				img {
+					width: 100%;
+				}
+
+				.button-play-video {
+					position : absolute;
+					top      : 50%;
+					left     : 50%;
+					transform: translate(-50%, -50%);
+					z-index  : 1;
+
+					img {
+						width : 65px;
+						height: 65px;
+					}
+				}
+
+				&:after {
+					content   : '';
+					width     : 100%;
+					height    : 100%;
+					top       : 0;
+					left      : 0;
+					background: rgba(#000000, .6);
+					position  : absolute;
+				}
+			}
+		}
+
+		.formSubmitLink {
+			margin-top: 72px;
+
+			label,
+			input {
+				display: block;
+			}
+
+			label {
+				font-size  : 18px;
+				font-weight: bold;
+				color      : #000000;
+			}
+
+			input[type=text] {
+				// FONTS
+				font-size: 18px;
+				// END FONTS
+				width     : 100%;
+				height    : 53px;
+				margin    : 25px 0;
+				border    : none;
+				padding   : 0 30px;
+				box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+			}
+
+			button {
+				border     : none;
+				display    : block;
+				margin-left: auto;
+				background : #000000;
+				box-shadow : 0 0 7px rgba(0, 0, 0, 0.1);
+				color      : #fff;
+				height     : 45px;
+				line-height: 45px;
+				padding    : 0 45px;
+			}
+		}
+	}
+}
