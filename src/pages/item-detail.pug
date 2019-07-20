@@ -28,7 +28,12 @@ block main
 						.title-story
 							h3 Câu chuyện đường đua
 							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dol. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-							button CHỈNH SỬA BÀI DỰ THI
+					button(data-fancybox data-src="#popup-inputCode") CHỈNH SỬA BÀI DỰ THI
+					#popup-inputCode
+						.box-content
+							h5 Nhận mã bài dự thi
+							input(type="text" placeholder="Nhập mã code")
+							button Xác Nhận
 				.col-5.list-same-item
 					.same-item
 						figure

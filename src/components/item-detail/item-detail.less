@@ -107,18 +107,18 @@
                     -webkit-line-clamp: 4;
                     -webkit-box-orient: vertical;
                 }
-
-                button {
-                    margin-top : 55px;
-                    border     : none;
-                    background : #000000;
-                    box-shadow : 0 0 7px rgba(0, 0, 0, 0.1);
-                    color      : #fff;
-                    line-height: 45px;
-                    height     : 45px;
-                    padding    : 0 100px;
-                }
             }
+        }
+
+        button {
+            margin-top : 55px;
+            border     : none;
+            background : #000000;
+            box-shadow : 0 0 7px rgba(0, 0, 0, 0.1);
+            color      : #fff;
+            line-height: 45px;
+            height     : 45px;
+            padding    : 0 100px;
         }
     }
 
@@ -242,6 +242,46 @@
             margin-left: auto;
             color      : #fff;
             font-size  : 18px;
+        }
+    }
+}
+
+#popup-inputCode {
+    width  : 675px;
+    display: none;
+    padding: 0;
+
+    .box-content {
+        padding   : 65px;
+        background: #F2F2F2;
+        border    : 12px solid rgba(0, 0, 0, .8);
+
+        h5 {
+            color        : #ED1D24;
+            font-size    : 18px;
+            font-weight  : 800;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            border     : 0;
+            width      : 100%;
+            font-size  : 18px;
+            color      : #000;
+            box-shadow : 0 3px 6px rgba(0, 0, 0, 0.16);
+            line-height: 53px;
+            padding    : 0 30px;
+        }
+
+        button {
+            border    : none;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            height    : 45px;
+            padding   : 0 45px;
+            display   : block;
+            margin    : 45px auto 0;
+            background: #000;
+            color     : #fff;
         }
     }
 }
