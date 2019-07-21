@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;display=swap&amp;subset=vietnamese">
+		<link rel="stylesheet" href="./css/core.min.css">
+		<link rel="stylesheet" href="./css/main.min.css">
+		<title>Danh Sách Bài Viết</title>
+		<script>
+			(function () {
+				function id(v) { return document.getElementById(v); }
+				function loadbar() {
+					var ovrl = id("loading"),
+						prog = id("progress"),
+						stat = id("progstat"),
+						img = document.images,
+						c = 0,
+						tot = img.length;
+					if (tot == 0) return doneLoading();
+					function imgLoaded() {
+						c += 1;
+						var perc = ((100 / tot * c) << 0);
+						prog.style.width = perc;
+						stat.innerHTML = perc;
+						if (c === tot) return doneLoading();
+					}
+					function doneLoading() {
+						ovrl.style.opacity = 0;
+						setTimeout(function () {
+							ovrl.style.display = "none";
+						}, 1200);
+					}
+					for (var i = 0; i < tot; i++) {
+						var tImg = new Image();
+						tImg.onload = imgLoaded;
+						tImg.onerror = imgLoaded;
+						tImg.src = img[i].src;
+					}
+				}
+				document.addEventListener('DOMContentLoaded', loadbar, false);
+			}());
+		</script>
+	</head>
+	<body class="list-item-page">
+		<div id="loading">
+			<div class="logo-loader"><img src="./img/icons/loading.gif" alt=""></div>
+			<div class="progstat-wrapper">Loading: <span id="progstat">0</span>%</div>
+			<div id="progress"></div>
+		</div>
+		<header>
+			<div class="container">
+				<div class="row no-gutters"><a href="index.html">
+						<figure class="logo"><img src="../img/logo.png" alt="" srcset=""></figure></a>
+					<ul class="list-menu">
+						<li class="item-menu"><a href="#">THÔNG TIN TRƯƠNG TRÌNH</a></li>
+						<li class="item-menu"><a href="#">THỂ LỆ CUỘC THI</a></li>
+						<li class="item-menu"><a href="list-item.html">DANH SÁCH BÀI THAM DỰ</a></li>
+						<li class="item-menu"><a href="#">THAM GIA NGAY</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="list-item">
+				<div class="container">
+					<h3 class="title">DANH SÁCH CÁC BÀI DỰ THI</h3>
+					<div class="row list-post">
+						<div class="col-lg-6 item">
+							<figure>
+								<div class="box-img"><img src="./img/list-item/item-02.png" alt="" srcset=""></div>
+								<figcaption>
+									<div class="content">
+										<h5>PHAN GIA CÁT NHẬT LINH</h5><span class="date">24/02/2020</span>
+									</div>
+									<div class="voted"><span>20</span>
+										<div class="icon-vote" data-vote="true">
+											<div class="heart-full"></div>
+											<div class="heart-nofull"></div>
+										</div>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-lg-6 item">
+							<figure>
+								<div class="box-img"><img src="./img/list-item/item-02.png" alt="" srcset=""></div>
+								<figcaption>
+									<div class="content">
+										<h5>PHAN GIA CÁT NHẬT LINH</h5><span class="date">24/02/2020</span>
+									</div>
+									<div class="voted"><span>20</span>
+										<div class="icon-vote" data-vote="false">
+											<div class="heart-full"></div>
+											<div class="heart-nofull"></div>
+										</div>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-lg-6 item">
+							<figure>
+								<div class="box-img"><img src="./img/list-item/item-02.png" alt="" srcset=""></div>
+								<figcaption>
+									<div class="content">
+										<h5>PHAN GIA CÁT NHẬT LINH</h5><span class="date">24/02/2020</span>
+									</div>
+									<div class="voted"><span>20</span>
+										<div class="icon-vote" data-vote="false">
+											<div class="heart-full"></div>
+											<div class="heart-nofull"></div>
+										</div>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-lg-6 item">
+							<figure>
+								<div class="box-img"><img src="./img/list-item/item-02.png" alt="" srcset=""></div>
+								<figcaption>
+									<div class="content">
+										<h5>PHAN GIA CÁT NHẬT LINH</h5><span class="date">24/02/2020</span>
+									</div>
+									<div class="voted"><span>20</span>
+										<div class="icon-vote" data-vote="false">
+											<div class="heart-full"></div>
+											<div class="heart-nofull"></div>
+										</div>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-lg-6 item">
+							<figure>
+								<div class="box-img"><img src="./img/list-item/item-02.png" alt="" srcset=""></div>
+								<figcaption>
+									<div class="content">
+										<h5>PHAN GIA CÁT NHẬT LINH</h5><span class="date">24/02/2020</span>
+									</div>
+									<div class="voted"><span>20</span>
+										<div class="icon-vote" data-vote="false">
+											<div class="heart-full"></div>
+											<div class="heart-nofull"></div>
+										</div>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-lg-6 item">
+							<figure>
+								<div class="box-img"><img src="./img/list-item/item-02.png" alt="" srcset=""></div>
+								<figcaption>
+									<div class="content">
+										<h5>PHAN GIA CÁT NHẬT LINH</h5><span class="date">24/02/2020</span>
+									</div>
+									<div class="voted"><span>20</span>
+										<div class="icon-vote" data-vote="false">
+											<div class="heart-full"></div>
+											<div class="heart-nofull"></div>
+										</div>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-lg-6 item">
+							<figure>
+								<div class="box-img"><img src="./img/list-item/item-02.png" alt="" srcset=""></div>
+								<figcaption>
+									<div class="content">
+										<h5>PHAN GIA CÁT NHẬT LINH</h5><span class="date">24/02/2020</span>
+									</div>
+									<div class="voted"><span>20</span>
+										<div class="icon-vote" data-vote="false">
+											<div class="heart-full"></div>
+											<div class="heart-nofull"></div>
+										</div>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-lg-6 item">
+							<figure>
+								<div class="box-img"><img src="./img/list-item/item-02.png" alt="" srcset=""></div>
+								<figcaption>
+									<div class="content">
+										<h5>PHAN GIA CÁT NHẬT LINH</h5><span class="date">24/02/2020</span>
+									</div>
+									<div class="voted"><span>20</span>
+										<div class="icon-vote" data-vote="false">
+											<div class="heart-full"></div>
+											<div class="heart-nofull"></div>
+										</div>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="pagination">
+							<ul class="list-number">
+								<div class="item"><a href="#">1</a></div>
+								<div class="item"><a class="active" href="#">2</a></div>
+								<div class="item"><a href="#">3</a></div>
+								<div class="item"><a href="#">4</a></div>
+								<div class="item"><a href="#">5</a></div>
+								<div class="item"><a href="#">...</a></div>
+								<div class="item"><a href="#">41</a></div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 content-left">
+						<div class="address">
+							<p>Địa chỉ: Lầu 29, Tòa nhà Pearl Plaza, 561A Điện Biên Phủ, Phường 25, Quận Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam</p>
+						</div>
+						<figure class="logo"><img src="../img/logo.png" alt="" srcset=""></figure>
+					</div>
+					<div class="col-6 content-right">
+						<ul class="social-network">
+							<div class="item"><img src="../img/icons/facebook.svg" alt="" srcset=""></div>
+							<div class="item"><img src="../img/icons/twitter.svg" alt="" srcset=""></div>
+							<div class="item"><img src="../img/icons/instagram.svg" alt="" srcset=""></div>
+							<div class="item"><img src="../img/icons/youtube.svg" alt="" srcset=""></div>
+						</ul>
+						<ul class="list-contact">
+							<div class="item">
+								<p>Tell: (84 8) 3513 6015 - 35136026</p>
+							</div>
+							<div class="item">
+								<p>Email: info@vilube.com</p>
+							</div>
+							<div class="item">
+								<p>Fax: (84 8) 3513 6027</p>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="./js/core.min.js"></script>
+		<script src="./js/main.min.js"></script>
+	</body>
+</html>

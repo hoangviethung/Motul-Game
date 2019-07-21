@@ -9,7 +9,7 @@ const addClassLazyload = () => {
         }
     });
 }
-
+// BANNER SLIDER
 function bannerSlider() {
     var swiper = new Swiper('.home_banner .swiper-container', {
         spaceBetween: 30,
@@ -28,6 +28,7 @@ function bannerSlider() {
     })
 }
 
+// CLICK CHỌN FILE
 function file() {
     $('.home-section-3 .button-choose-file').on('click', function () {
         console.log('OK');
@@ -48,11 +49,12 @@ function readURL(input) {
     }
 }
 
+// ĐỔI ẢNH ĐÃ LẤY ĐƯỢC TỪ URL
 $("#imgInp").change(function () {
     readURL(this);
 });
-// LẤY HÌNH ẢNH TỪ INPUT FILE
 
+// VOTED
 function voteRating() {
     $('[data-vote]').each(function () {
         var vote = $(this).attr('data-vote');
@@ -71,6 +73,17 @@ function voteRating() {
     })
 }
 
+function _scrollMenuFixed() {
+    var scroll = $(window).scrollTop();
+    var heightHeader = $('header').height();
+    if (scroll >= heightHeader) {
+        $('header').addClass('active');
+        console.log('OKKKKKKKKKK');
+    } else {
+        $('header').removeClass('active');
+    }
+}
+
 
 
 
@@ -85,11 +98,13 @@ $(document).ready(function () {
     voteRating();
 })
 
+$(window).on('scroll', function () {
+    _scrollMenuFixed();
+});
+
 $(document).ajaxComplete(function () {
     // Luôn luôn chậy polyfill cho thuôc tính object-fit: cover trên các phiên bản IE >= 9
     objectFitImages("img.object-fit-cover");
     // Luôn luôn addClass lazyload cho các hình ảnh có thuộc tính [data-src]
     addClassLazyload();
-
-
 })

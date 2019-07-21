@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;display=swap&amp;subset=vietnamese">
+		<link rel="stylesheet" href="./css/core.min.css">
+		<link rel="stylesheet" href="./css/main.min.css">
+		<title>Home</title>
+		<script>
+			(function () {
+				function id(v) { return document.getElementById(v); }
+				function loadbar() {
+					var ovrl = id("loading"),
+						prog = id("progress"),
+						stat = id("progstat"),
+						img = document.images,
+						c = 0,
+						tot = img.length;
+					if (tot == 0) return doneLoading();
+					function imgLoaded() {
+						c += 1;
+						var perc = ((100 / tot * c) << 0);
+						prog.style.width = perc;
+						stat.innerHTML = perc;
+						if (c === tot) return doneLoading();
+					}
+					function doneLoading() {
+						ovrl.style.opacity = 0;
+						setTimeout(function () {
+							ovrl.style.display = "none";
+						}, 1200);
+					}
+					for (var i = 0; i < tot; i++) {
+						var tImg = new Image();
+						tImg.onload = imgLoaded;
+						tImg.onerror = imgLoaded;
+						tImg.src = img[i].src;
+					}
+				}
+				document.addEventListener('DOMContentLoaded', loadbar, false);
+			}());
+		</script>
+	</head>
+	<body class="home-page">
+		<div id="loading">
+			<div class="logo-loader"><img src="./img/icons/loading.gif" alt=""></div>
+			<div class="progstat-wrapper">Loading: <span id="progstat">0</span>%</div>
+			<div id="progress"></div>
+		</div>
+		<header>
+			<div class="container">
+				<div class="row no-gutters"><a href="index.html">
+						<figure class="logo"><img src="../img/logo.png" alt="" srcset=""></figure></a>
+					<ul class="list-menu">
+						<li class="item-menu"><a href="#">THÔNG TIN TRƯƠNG TRÌNH</a></li>
+						<li class="item-menu"><a href="#">THỂ LỆ CUỘC THI</a></li>
+						<li class="item-menu"><a href="list-item.html">DANH SÁCH BÀI THAM DỰ</a></li>
+						<li class="item-menu"><a href="#">THAM GIA NGAY</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="home_banner">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<figure>
+										<div class="box-img"><img src="./img/home/home_banner.png" alt="" srcset=""></div>
+									</figure>
+								</div>
+								<div class="swiper-slide">
+									<figure>
+										<div class="box-img"><img src="./img/home/home_banner.png" alt="" srcset=""></div>
+									</figure>
+								</div>
+								<div class="swiper-slide">
+									<figure>
+										<div class="box-img"><img src="./img/home/home_banner.png" alt="" srcset=""></div>
+									</figure>
+								</div>
+								<div class="swiper-slide">
+									<figure>
+										<div class="box-img"><img src="./img/home/home_banner.png" alt="" srcset=""></div>
+									</figure>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="home-section-1">
+				<div class="container">
+					<div class="row">
+						<div class="title-main">
+							<figure><img src="./img/home/img-title-main.png" alt="" srcset="">
+								<figcaption>
+									<h1>ĐƯỜNG ĐUA THỰC,<br>TRẢI NGHIỆM THỰC</h1>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="row list-item-about-racetrack">
+							<div class="col-lg-4 item-about-racetrack">
+								<figure>
+									<div class="box-img"><img src="./img/home/item-01.png" alt="" srcset=""></div>
+									<figcaption>
+										<h5>HÀO HỨNG VỚI  ĐƯỜNG ĐUA THỰC</h5>
+										<p>Zhuhai là đường đua đạt chuẩn quốc tế tọa lạc tại thành phố Chu Hải, tỉnh Quảng Đông, Trung Quốc</p>
+										<ul class="list-info-racetrack">
+											<li class="item">4,319 km</li>
+											<li class="item">14 khúc cua (9 phải, 6 trái)</li>
+										</ul>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="col-lg-4 item-about-racetrack active">
+								<figure>
+									<div class="box-img"><img src="./img/home/item-02.png" alt="" srcset=""></div>
+									<figcaption>
+										<h5>THĂNG HOA CÙNG TRẢI NGHIỆM THỰC</h5>
+										<p>
+											Zhuhai là đường đua đạt chuẩn quốc tế tọa lạc <span>tại thành phố Chu Hải, tỉnh Quảng Đông, Trung Quốc</span></p>
+										<ul class="list-info-racetrack">
+											<li class="item">Tham gia các khóa đào tạo chuyên sâu</li>
+											<li class="item">Trải nghiệm trực tiếp đường đua chuẩn quốc tế</li>
+										</ul>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="col-lg-4 item-about-racetrack">
+								<figure>
+									<div class="box-img"><img src="./img/home/item-03.png" alt="" srcset=""></div>
+									<figcaption>
+										<h5>THĂNG HOA CÙNG TRẢI NGHIỆM THỰC</h5>
+										<p>Zhuhai là đường đua đạt chuẩn quốc tế tọa lạc tại thành phố Chu Hải, tỉnh Quảng Đông, Trung Quốc</p>
+										<ul class="list-info-racetrack">
+											<li class="item">4,319 km</li>
+											<li class="item">14 khúc cua (9 phải, 6 trái)</li>
+										</ul>
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+						<div class="description-main">
+							<figure>
+								<div class="box-img"><img src="./img/home/img-description-main.png" alt="" srcset=""></div>
+								<figcaption>
+									<h3>TRẢI NGHIỆM ĐƯỜNG ĐUA<br>QUỐC TẾ <span>ZHUHAI VỚI TƯ CÁCH VIP</span></h3>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="home-section-2">
+				<div class="container">
+					<div class="title-about">
+						<h5>CUỘC THI:</h5>
+						<h3>“CHIA SẺ HÀNH TRÌNH, NHẬN VÉ ĐẾN ZHUHAI”</h3>
+						<p>
+							Tham gia cuộc thi để có cơ hội nhận được chiếc vé đặc biệt đến với chương trình<span>“Motul driving experiences - Đường đua thực, trải nghiệm thực”. </span>Motul tin chắc rằng anh/em sẽ có những những cảm xúc mãnh liệt và tuyệt vời nhất tại đường đua chuẩn quốc tế Zhuhai, Trung Quốc.</p>
+					</div>
+					<div class="box-guide">
+						<div class="title-guide">
+							<h3>CÁCH THỨC THAM DỰ</h3>
+						</div>
+						<div class="desciption-guide">
+							<h5 class="step">Bước 1</h5>
+							<p>Người chơi sẽ lái xe ô tô và sử dụng hệ thống định vị GPS trên xe của mình để vẽ ra hình dáng của đường đua Zhuhai. Trong đó, khoảng cách di chuyển tối thiểu là 4,319km và đi qua 14 khúc cua. (Xem cách thức vẽ hình bằng GPS.</p>
+							<h5 class="step">Bước 2</h5>
+							<p>Livestream hoặc quay video quá trình di chuyển và chia sẻ về trang cá nhân với hashtag #Motul #Duongduathuc #Trainghiemthuc #Zhuhai. </p>
+							<h5 class="step">Bước 3</h5>
+							<p>Đăng tải bài dự thi tại website: <a href="#">link </a>và kêu gọi bình chọn bằng cách vote trực tiếp trên bài dự thi của từng cá nhân.</p>
+							<h3>Ngoài ra, để nhận thêm điểm từ BTC người chơi hãy:</h3><span>1, Quay spanhim chia sẻ các cách bảo dưỡng và bảo trì ô tô ngay tại nhà</span><span>2, Trở thành thành viên của cộng đồng Motul MotorSport, bằng cách nhắn theo dõi tại <a href="#">link</a></span><a href="#">
+								<button>THAM GIA NGAY</button></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="home-section-3">
+				<div class="container">
+					<h3 class="title">THAM GIA TẠI ĐÂY</h3>
+					<div class="row">
+						<div class="col-6 content-left">
+							<label for="#">Tải ảnh tại đây</label><img class="button-choose-file" src="./img/home/bg-chooes-file.png" alt="" srcset="">
+							<input id="imgInp" type="file">
+						</div>
+						<div class="col-6 content-right">
+							<label for="#">Nhập link video livestream của bạn</label>
+							<input type="text" placeholder="Nhập link của bạn...">
+							<label for="#">Nhập link video của bạn (*không bắt buộc)</label>
+							<input type="text" placeholder="Nhập link của bạn...">
+							<textarea name="" cols="30" rows="10" placeholder="Câu chuyện đường đua..."></textarea>
+						</div>
+						<div class="your-info">
+							<h5>THÔNG TIN CỦA BẠN</h5>
+							<div class="from-register">
+								<form action="#">
+									<input class="name" type="text" placeholder="Họ Tên">
+									<input class="phone-number" type="text" placeholder="Điện thoại">
+									<input class="email" type="text" placeholder="Email">
+									<input class="address" type="text" placeholder="Địa chỉ">
+									<input id="checkbox" type="checkbox">
+									<label for="checkbox">Đã đọc và hiểu <a data-fancybox data-src="#provision-popup">nội quy của chương trình</a></label>
+									<button>NỘP BÀI DỰ THI</button>
+								</form>
+							</div>
+						</div>
+						<div id="provision-popup">
+							<h5 class="title-provision">ĐIỀU KHOẢN KHI THAM GIA CUỘC THI</h5>
+							<div class="box-content">
+								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+								<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien.</p>
+								<p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede.</p>
+							</div>
+							<div class="button-back">
+								<button>QUAY LẠI</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 content-left">
+						<div class="address">
+							<p>Địa chỉ: Lầu 29, Tòa nhà Pearl Plaza, 561A Điện Biên Phủ, Phường 25, Quận Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam</p>
+						</div>
+						<figure class="logo"><img src="../img/logo.png" alt="" srcset=""></figure>
+					</div>
+					<div class="col-6 content-right">
+						<ul class="social-network">
+							<div class="item"><img src="../img/icons/facebook.svg" alt="" srcset=""></div>
+							<div class="item"><img src="../img/icons/twitter.svg" alt="" srcset=""></div>
+							<div class="item"><img src="../img/icons/instagram.svg" alt="" srcset=""></div>
+							<div class="item"><img src="../img/icons/youtube.svg" alt="" srcset=""></div>
+						</ul>
+						<ul class="list-contact">
+							<div class="item">
+								<p>Tell: (84 8) 3513 6015 - 35136026</p>
+							</div>
+							<div class="item">
+								<p>Email: info@vilube.com</p>
+							</div>
+							<div class="item">
+								<p>Fax: (84 8) 3513 6027</p>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="./js/core.min.js"></script>
+		<script src="./js/main.min.js"></script>
+	</body>
+</html>

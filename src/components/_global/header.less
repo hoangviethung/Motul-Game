@@ -1,6 +1,14 @@
 header {
+    // position  : fixed;
+    // top       : 0;
+    width     : 100%;
     padding   : 15px 0;
     background: #191919;
+    z-index   : 100;
+
+    &.active {
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+    }
 
     .container {
         .list-menu {
