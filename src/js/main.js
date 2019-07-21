@@ -73,6 +73,17 @@ function voteRating() {
     })
 }
 
+// GET THUMBNAIL YOUTUBE
+function _getThumbnailYoutobe() {
+    $(".button-play-video").each(function () {
+        var src = $(this).attr("href");
+        var youtube_video_id = src.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
+        if (youtube_video_id.length == 11) {
+            $(this).siblings("img").attr("src", "https://img.youtube.com/vi/" + youtube_video_id + "/mqdefault.jpg");
+        }
+    })
+}
+
 function _scrollMenuFixed() {
     var scroll = $(window).scrollTop();
     var heightHeader = $('header').height();
@@ -96,6 +107,7 @@ $(document).ready(function () {
     bannerSlider();
     file();
     voteRating();
+    _getThumbnailYoutobe();
 })
 
 $(window).on('scroll', function () {
