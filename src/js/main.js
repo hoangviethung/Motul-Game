@@ -75,7 +75,7 @@ function voteRating() {
 
 // GET THUMBNAIL YOUTUBE
 function _getThumbnailYoutube() {
-	$(".button-play-video a").each(function () {
+	$(".button-play-video").each(function () {
 		var src = $(this).attr("href");
 		var youtube_video_id = src.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
 		if (youtube_video_id.length == 11) {
