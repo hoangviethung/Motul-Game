@@ -1,14 +1,14 @@
 // Get youtube ID from URL
 const getYoutubeID = () => {
-	var url = $(".home_banner #video").attr("data-url");
+    var url = $(".home_banner #video").attr("data-url");
 
-	var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
-	var match = url.match(regExp);
-	if (match && match[7].length == 11) {
-		return match[7];
-	} else {
-		return false;
-	}
+    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+    var match = url.match(regExp);
+    if (match && match[7].length == 11) {
+        return match[7];
+    } else {
+        return false;
+    }
 }
 // END Get youtube ID from URL
 
@@ -20,34 +20,34 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 
 function onYouTubeIframeAPIReady() {
-	let id = getYoutubeID();
-	player = new YT.Player('video', {
-		height: '390',
-		width: '640',
-		videoId: id,
-		events: {
-			'onReady': onPlayerReady
-		}
-	});
+    let id = getYoutubeID();
+    player = new YT.Player('video', {
+        height: '390',
+        width: '640',
+        videoId: id,
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
 }
 //Functions to stop-pause Video  
 function onPlayerReady(event) {
-	if($(".home_banner #video").parent().index() === 0){
-		console.log(" oke first run")
-		event.target.playVideo();
-	}
+    if ($(".home_banner #video").parent().index() === 0) {
+        console.log(" oke first run")
+        event.target.playVideo();
+    }
 }
 
 function stopVideo() {
-	player.stopVideo();
+    player.stopVideo();
 }
 
 function pauseVideo() {
-	player.pauseVideo();
+    player.pauseVideo();
 }
 
 function playVideo() {
-	player.playVideo();
+    player.playVideo();
 }
 // END youtube API
 
@@ -88,12 +88,12 @@ function bannerSlider() {
     })
 
     swiper.on("slideChangeTransitionEnd", function () {
-		if ($(".swiper-container .swiper-slide-active #video").length > 0) {
-			playVideo();
-		} else {
-			pauseVideo();
-		}
-	})
+        if ($(".swiper-container .swiper-slide-active #video").length > 0) {
+            playVideo();
+        } else {
+            pauseVideo();
+        }
+    })
 }
 
 // CLICK CHỌN FILE
@@ -197,11 +197,18 @@ function showMenuMobile() {
         $('.list-menu').toggleClass('active');
     });
 }
+
 function closeMenuMobile() {
     $('.item-menu').on('click', function () {
         console.log('OKKK')
         $('.list-menu').removeClass('active');
     });
+}
+
+function removeClassActive() {
+    if ($(window).width() < 1024) {
+        $('.item-about-racetrack').removeClass(active);
+    }
 }
 
 $(document).ready(function () {
@@ -217,8 +224,7 @@ $(document).ready(function () {
     _toggle_button_menu();
     showMenuMobile();
     closeMenuMobile();
-
-    
+    removeClassActive();
 })
 
 $(window).on('scroll', function () {
