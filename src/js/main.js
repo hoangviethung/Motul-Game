@@ -26,8 +26,14 @@ function onYouTubeIframeAPIReady() {
 		width: '640',
 		videoId: id,
 		events: {
-			'onReady': onPlayerReady
-		}
+            'onReady': onPlayerReady
+        },
+        playerVars: { 
+            'autoplay': 0,
+            'controls': 0, 
+            'rel' : 0,
+            'fs' : 0,
+        }
 	});
 }
 //Functions to stop-pause Video  
