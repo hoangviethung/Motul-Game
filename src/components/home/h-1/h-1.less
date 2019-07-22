@@ -10,6 +10,7 @@
         left            : 0;
         width           : 721px;
         height          : 1247px;
+        pointer-events  : none;
         background-image: url(../img/bg-before.png);
     }
 
@@ -20,6 +21,7 @@
         right           : 0;
         width           : 678px;
         height          : 989px;
+        pointer-events  : none;
         background-image: url(../img/bg-before.png);
         object-fit      : cover;
     }
@@ -49,22 +51,11 @@
         margin     : 60px 0;
 
         .item-about-racetrack {
+            cursor    : pointer;
+            transition: .3s all ease-in-out;
 
-            &.active {
-                figure {
-                    figcaption {
-                        padding: 55px 23px 63px;
-
-                        h5 {
-                            font-size: 30px;
-                            width    : 100%;
-                        }
-
-                        p {
-                            font-size: 18px;
-                        }
-                    }
-                }
+            &:hover {
+                transform: scale(1.05);
             }
 
             figure {
@@ -86,6 +77,7 @@
                     background: rgba(0, 0, 0, .8);
                     padding   : 15px 23px 72px;
                     position  : relative;
+                    height    : 400px;
 
                     &::before {
                         content         : '';
@@ -127,16 +119,15 @@
                             color       : #fff;
 
                             &::before {
-                                content      : "";
-                                position     : absolute;
-                                display      : block;
-                                width        : 7px;
-                                height       : 7px;
-                                border-radius: 50%;
-                                left         : 0;
-                                top          : 50%;
-                                transform    : translateY(-50%);
-                                background   : #ED1D24;
+                                content   : "";
+                                position  : absolute;
+                                display   : block;
+                                width     : 10px;
+                                height    : 10px;
+                                left      : 0;
+                                top       : 50%;
+                                transform : translateY(-50%);
+                                background: #FFF;
                             }
                         }
                     }
@@ -180,7 +171,7 @@
 
 @media(max-width: 1024px) {
     .home-section-1 {
-        padding: 45px 35px;
+        padding: 45px 20px;
 
         &:after,
         &:before {
@@ -206,6 +197,22 @@
             .item-about-racetrack {
                 padding-bottom: 30px;
 
+                figure {
+                    figcaption {
+                        h5 {
+                            color: #fff;
+                        }
+
+                        p {
+                            font-size: 16px;
+                        }
+
+                        .list-info-racetrack {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
                 &:last-child {
                     padding-bottom: 0;
                 }
@@ -227,20 +234,6 @@
                         span {
                             font-size: 24px;
                         }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media(max-width: 768px){
-    .home-section-1{
-        .list-item-about-racetrack{
-            .item-about-racetrack{
-                figure{
-                    figcaption{
-                        
                     }
                 }
             }

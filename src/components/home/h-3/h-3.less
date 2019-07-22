@@ -214,7 +214,7 @@
 
             .content-left,
             .content-right {
-                padding: 0 35px;
+                padding: 0 20px;
 
                 label {
                     font-size: 14px;
@@ -285,6 +285,61 @@
 
         .box-content {
             padding: 0;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    #provision-popup {
+        padding: 44px 15px;
+
+        .box-content {
+            padding   : 0;
+            max-height: 300px;
+
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .home-section-3 {
+        form {
+            .your-info {
+                .from-register {
+                    button {
+                        padding: 0 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    #provision-popup {
+        padding: 44px 15px;
+
+        h5 {
+            font-size: 15px;
+            padding  : 20px 0;
+        }
+
+        .box-content {
+            padding   : 0;
+            max-height: 300px;
+
+            p {
+                font-size: 13px;
+            }
+        }
+
+        .button-back {
+            button {
+                line-height: 30px;
+                font-size  : 15px;
+                padding    : 0 20px;
+            }
         }
     }
 }

@@ -20,6 +20,11 @@
             top  : 45%;
         }
 
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+            cursor : pointer;
+        }
 
         .swiper-slide {
             background: #fff;
@@ -75,6 +80,15 @@
                         object-position: right;
                     }
                 }
+            }
+        }
+
+        .swiper-container {
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: block;
+                cursor : pointer;
             }
         }
 

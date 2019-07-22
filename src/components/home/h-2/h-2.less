@@ -94,10 +94,23 @@
             }
 
             span {
-                display   : inline-block;
-                font-size : 22px;
-                color     : #fff;
-                font-style: italic;
+                display      : inline-block;
+                font-size    : 22px;
+                color        : #fff;
+                font-style   : italic;
+                margin-bottom: 20px;
+            }
+
+            .popupink {
+                display: inline-block;
+                color  : #ED1D24;
+                
+            }
+
+            img {
+                width  : 280px;
+                margin : 0 auto;
+                display: block;
             }
 
             .submit {
@@ -130,16 +143,16 @@
 }
 
 @media(max-width: 1024px) {
-    &::after {
-        display: none;
-    }
-
-    &::before {
-        display: none;
-    }
-
     .home-section-2 {
-        padding: 35px;
+        &::after {
+            display: none;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        padding: 20px;
 
         .title-about {
             h5 {
@@ -200,7 +213,8 @@
         .box-guide {
             .desciption-guide {
                 .submit {
-                    width: 100%;
+                    width  : 100%;
+                    padding: 0;
                 }
             }
         }

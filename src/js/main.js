@@ -27,6 +27,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player, player_1, player_2;
 
 function onYouTubeIframeAPIReady() {
+
     if ($(".home_banner #video").length > 0) {
         let id = getYoutubeID(".home_banner #video");
         player = new YT.Player('video', {
@@ -87,6 +88,7 @@ function onPlayerStateChange(event) {
         $('.start-video').fadeIn('normal');
     }
 }
+
 function onPlayerReady(event) {
     if ($(".home_banner #video").parent().index() === 0) {
         console.log(" oke first run")
@@ -138,8 +140,8 @@ function bannerSlider() {
             clickable: true,
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.home_banner .swiper-button-next',
+            prevEl: '.home_banner .swiper-button-prev',
         },
     })
 
@@ -222,11 +224,15 @@ function _scrollMenuFixed() {
 // SCROLL MENU BY ID
 function _scrollMenuById() {
     $(".list-menu .item-menu").on('click', function () {
+
         let id = $(this).find('a').attr("href");
-        //Scroll tới vị trí click
-        $('html, body').animate({
-            scrollTop: $('#' + id).offset().top - $('header').height()
-        }, 500);
+        if ($('#' + id).length > 0) {
+            //Scroll tới vị trí click
+            $('html, body').animate({
+                scrollTop: $('#' + id).offset().top - $('header').height()
+            }, 500);
+        }
+
     });
 }
 
@@ -248,23 +254,27 @@ function _toggle_button_menu() {
     })
 }
 
+// SHOW MENU MOBILE
 function showMenuMobile() {
     $('#mobile-toggle').on('click', function () {
         $('.list-menu').toggleClass('active');
     });
 }
 
+// ĐÓNG NÚT MOBILE
 function closeMenuMobile() {
-    $('.item-menu').on('click', function () {
+    $('.item-menu').on('click', function (e) {
         console.log('OKKK')
         $('.list-menu').removeClass('active');
-    });
-}
 
-function removeClassActive() {
-    if ($(window).width() < 1024) {
-        $('.item-about-racetrack').removeClass(active);
-    }
+
+        const btnline1 = $('#btn_line1');
+        const btnline2 = $('#btn_line2');
+        const btnline3 = $('#btn_line3');
+        btnline1.removeClass('line-close-1');
+        btnline2.removeClass('line_hidden');
+        btnline3.removeClass('line-close-3');
+    });
 }
 
 $(document).ready(function () {
@@ -280,7 +290,6 @@ $(document).ready(function () {
     _toggle_button_menu();
     showMenuMobile();
     closeMenuMobile();
-    removeClassActive();
 })
 
 $(window).on('scroll', function () {
