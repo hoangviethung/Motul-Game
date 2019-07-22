@@ -138,6 +138,15 @@
 
         .same-item {
             figure {
+                &:hover {
+                    .img-video {
+                        &::after {
+                            opacity   : 0;
+                            visibility: hidden;
+                        }
+                    }
+                }
+
                 figcaption {
                     h5 {
                         font-size    : 18px;
@@ -145,6 +154,35 @@
                         margin-bottom: 25px;
                         padding-left : 25px;
                     }
+                }
+
+                .start-video {
+                    position: absolute;
+                    top     : 80px;
+                    padding : 12px;
+                    left    : 174px;
+                    opacity : .3;
+
+                    cursor: pointer;
+
+                    transition: all 0.3s;
+                }
+
+                .start-video:hover {
+                    opacity       : 1;
+                    -webkit-filter: brightness (1);
+                }
+
+                div.thumbnail_container {
+                    width           : 434px;
+                    height          : 244px;
+                    overflow        : hidden;
+                    background-color: #000;
+                }
+
+                img.thumbnail {
+                    margin-top: -50px;
+                    opacity   : 0.5;
                 }
 
                 .img-video {
@@ -188,6 +226,7 @@
                         left      : 0;
                         background: rgba(#000000, .6);
                         position  : absolute;
+                        transition: .3s all ease-in-out;
                     }
                 }
             }

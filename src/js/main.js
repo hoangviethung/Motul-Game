@@ -1,6 +1,13 @@
+$(document).on('click', '.start-video', function () {
+    $(this).hide();
+    $("#player").show();
+    $("#thumbnail_container").hide();
+    player.playVideo();
+});
+
 // Get youtube ID from URL
-const getYoutubeID = () => {
-    var url = $(".home_banner #video").attr("data-url");
+const getYoutubeID = (e) => {
+    var url = $(e).attr("data-url");
 
     var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
     var match = url.match(regExp);
@@ -17,26 +24,48 @@ var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-var player;
+var player, player_2;
 
 function onYouTubeIframeAPIReady() {
-	let id = getYoutubeID();
-	player = new YT.Player('video', {
-		height: '390',
-		width: '640',
-		videoId: id,
-		events: {
+    let id = getYoutubeID(".home_banner #video");
+    player = new YT.Player('video', {
+        height: '390',
+        width: '640',
+        videoId: id,
+        events: {
             'onReady': onPlayerReady
         },
-        playerVars: { 
+        playerVars: {
             'autoplay': 0,
-            'controls': 0, 
-            'rel' : 0,
-            'fs' : 0,
+            'controls': 0,
+            'rel': 0,
+            'fs': 0,
         }
-	});
+    });
+
+
+    let id_2 = getYoutubeID(".list-same-item #player");
+    player_2 = new YT.Player('player', {
+        height: '244',
+        width: '434',
+        videoId: id_2,  // youtube video id
+        playerVars: {
+            'autoplay': 0,
+            'rel': 0,
+            'showinfo': 0
+        },
+        events: {
+            'onStateChange': onPlayerStateChange
+        }
+    });
 }
 //Functions to stop-pause Video  
+
+function onPlayerStateChange (event) {
+    if (event.data == YT.PlayerState.ENDED) {
+        $('.start-video').fadeIn('normal');
+    }
+}
 function onPlayerReady(event) {
     if ($(".home_banner #video").parent().index() === 0) {
         console.log(" oke first run")
