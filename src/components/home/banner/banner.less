@@ -21,63 +21,65 @@
         }
 
 
-    .swiper-slide {
-        background: #fff;
-        text-align: center;
-        #video {
-            width : 100%;
-            height: 100%;
-        }
-        &[id*="_no-clickjacking-"]{
-            opacity: 0!important;
-        }
-        
-        &[id*="_no-clickjacking"].swiper-slide-active{
-            opacity: 1!important;
-        }
-    }
+        .swiper-slide {
+            background: #fff;
+            text-align: center;
 
-    figure {
-        .box-img {
-            position: relative;
-            display : flex;
-
-
-
-            img {
-                width     : 100%;
-                height    : auto;
-                object-fit: cover;
+            #video {
+                width : 100%;
+                height: 100%;
             }
 
-            &:after {
-                position        : absolute;
-                content         : '';
-                width           : 100%;
-                height          : 100%;
-                top             : 0;
-                left            : 0;
-                opacity         : .35;
-                background-image: linear-gradient(to right, rgba(25, 25, 25, 1), rgba(25, 25, 25, .9), rgba(25, 25, 25, 0));
+            &[id*="_no-clickjacking-"] {
+                opacity: 0 !important;
+            }
+
+            &[id*="_no-clickjacking"].swiper-slide-active {
+                opacity: 1 !important;
             }
         }
-    }
-}
 
-@media(max-width: 1024px) {
-    .home_banner {
         figure {
             .box-img {
+                position: relative;
+                display : flex;
+
+
+
                 img {
-                    height         : 500px;
-                    object-position: right;
+                    width     : 100%;
+                    height    : auto;
+                    object-fit: cover;
+                }
+
+                &:after {
+                    position        : absolute;
+                    content         : '';
+                    width           : 100%;
+                    height          : 100%;
+                    top             : 0;
+                    left            : 0;
+                    opacity         : .35;
+                    background-image: linear-gradient(to right, rgba(25, 25, 25, 1), rgba(25, 25, 25, .9), rgba(25, 25, 25, 0));
                 }
             }
         }
     }
 
-    .swiper-pagination {
-        display: none;
+    @media(max-width: 1024px) {
+        .home_banner {
+            figure {
+                .box-img {
+                    img {
+                        height         : 500px;
+                        object-position: right;
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination {
+            display: none;
+        }
     }
-}
 }
