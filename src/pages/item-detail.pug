@@ -41,16 +41,14 @@ block main
 							figcaption
 								h5 VIDEO HÀNH TRÌNH
 							.img-video
-								#player(data-url='https://www.youtube.com/watch?v=KrrpHlb_pCA')
-								#thumbnail_container.thumbnail_container
-								#thumbnail.thumbnail
+								#player_1(data-url='https://www.youtube.com/watch?v=KrrpHlb_pCA')
 								a.start-video
-									img(src="./img/icons/button_play_video.png", alt="", srcset="")
+									//- img(src="./img/icons/button_play_video.png", alt="", srcset="")
 					.same-item
 						figure
 							figcaption
 								h5 VIDEO HÀNH TRÌNH
-							.img-video.none-video
-								img(src="", alt="", srcset="")
-								a.button-play-video(data-fancybox data-ratio="2" href="#")
-									img(src="./img/icons/button_play_video.png", alt="", srcset="")
+							.img-video
+								#player_2()
+								a.start-video
+									//- img(src="./img/icons/button_play_video.png", alt="", srcset="")

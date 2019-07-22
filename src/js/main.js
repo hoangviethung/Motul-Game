@@ -2,7 +2,7 @@ $(document).on('click', '.start-video', function () {
     $(this).hide();
     $("#player").show();
     $("#thumbnail_container").hide();
-    player.playVideo();
+    player_2.playVideo();
 });
 
 // Get youtube ID from URL
@@ -24,44 +24,65 @@ var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-var player, player_2;
+var player, player_1, player_2;
 
 function onYouTubeIframeAPIReady() {
-    let id = getYoutubeID(".home_banner #video");
-    player = new YT.Player('video', {
-        height: '390',
-        width: '640',
-        videoId: id,
-        events: {
-            'onReady': onPlayerReady
-        },
-        playerVars: {
-            'autoplay': 0,
-            'controls': 0,
-            'rel': 0,
-            'fs': 0,
-        }
-    });
+    if ($(".home_banner #video").length > 0) {
+        let id = getYoutubeID(".home_banner #video");
+        player = new YT.Player('video', {
+            height: '390',
+            width: '640',
+            videoId: id,
+            events: {
+                'onReady': onPlayerReady
+            },
+            playerVars: {
+                'autoplay': 0,
+                'controls': 0,
+                'rel': 0,
+                'fs': 0,
+            }
+        });
+    }
 
+    if ($(".list-same-item #player_1").length > 0) {
+        let id_1 = getYoutubeID("#player_1");
+        player_1 = new YT.Player('player_1', {
+            height: '244',
+            width: '434',
+            videoId: id_1, // youtube video id
+            playerVars: {
+                'autoplay': 0,
+                'rel': 0,
+                'showinfo': 0
+            },
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
 
-    let id_2 = getYoutubeID(".list-same-item #player");
-    player_2 = new YT.Player('player', {
-        height: '244',
-        width: '434',
-        videoId: id_2,  // youtube video id
-        playerVars: {
-            'autoplay': 0,
-            'rel': 0,
-            'showinfo': 0
-        },
-        events: {
-            'onStateChange': onPlayerStateChange
-        }
-    });
+    }
+
+    if ($(".list-same-item #player_2").length > 0) {
+        let id_2 = getYoutubeID("#player_2");
+        player_2 = new YT.Player('player_2', {
+            height: '244',
+            width: '434',
+            videoId: id_2, // youtube video id
+            playerVars: {
+                'autoplay': 0,
+                'rel': 0,
+                'showinfo': 0
+            },
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
 }
 //Functions to stop-pause Video  
 
-function onPlayerStateChange (event) {
+function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.ENDED) {
         $('.start-video').fadeIn('normal');
     }
