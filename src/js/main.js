@@ -20,15 +20,21 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 
 function onYouTubeIframeAPIReady() {
-    let id = getYoutubeID();
-    player = new YT.Player('video', {
-        height: '390',
-        width: '640',
-        videoId: id,
-        events: {
+	let id = getYoutubeID();
+	player = new YT.Player('video', {
+		height: '390',
+		width: '640',
+		videoId: id,
+		events: {
             'onReady': onPlayerReady
+        },
+        playerVars: { 
+            'autoplay': 0,
+            'controls': 0, 
+            'rel' : 0,
+            'fs' : 0,
         }
-    });
+	});
 }
 //Functions to stop-pause Video  
 function onPlayerReady(event) {
