@@ -16,15 +16,24 @@ section.home-section-3#home-section-3
 				.your-info
 					h5 THÔNG TIN CỦA BẠN
 					.from-register
-						input.name(type="text" placeholder="Họ Tên*")
-						input.phone-number(type="text" placeholder="Điện thoại*")
-						input.name(type="text" placeholder="Tên Xe*")
-						input.phone-number(type="text" placeholder="Biển số xe*")
-						input.email(type="text" placeholder="Email")
-						input.address(type="text" placeholder="Địa chỉ")
-						input#checkbox(type="checkbox")
-						label(for="checkbox") Tôi đã đọc và hiểu 
-							a(data-fancybox data-src="#provision-popup") nội quy của chương trình
+						.form-group.col-md-6
+							input.name(type="text" placeholder="Họ Tên*")
+						.form-group.col-md-6
+							input.phone-number(type="text" placeholder="Điện thoại*")
+							span.error Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic laborum quaerat mollitia amet, facilis deserunt sequi, eum deleniti, molestiae delectus molestias illo iure. Modi harum error corporis atque maxime eos.
+						.form-group.col-md-6
+							input.name(type="text" placeholder="Tên Xe*")
+						.form-group.col-md-6
+							input.phone-number(type="text" placeholder="Biển số xe*")
+						.form-group.col-12
+							input.email(type="text" placeholder="Email")
+						.form-group.col-12
+							input.address(type="text" placeholder="Địa chỉ")
+						.form-group.col-12
+							input#checkbox(type="checkbox")
+							label(for="checkbox") Tôi đã đọc và hiểu 
+								a(data-fancybox data-src="#provision-popup") nội quy của chương trình
+
 						button NỘP BÀI DỰ THI
 				#provision-popup
 					h5.title-provision ĐIỀU KHOẢN KHI THAM GIA CUỘC THI

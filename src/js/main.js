@@ -284,11 +284,12 @@ function fixScroll() {
                 document.getElementsByClassName("fancybox-content")[0].scrollTop = 0
                 $('.fancybox-inner').fadeIn(200);
                 instance.update();
-            }, 450);
+            }, 300);
         }
     })
-
 }
+
+
 
 
 $(document).ready(function () {
