@@ -277,6 +277,20 @@ function closeMenuMobile() {
     });
 }
 
+function fixScroll() {
+    $('[data-fancybox]').fancybox({
+        afterShow: function (instance, slide) {
+            setTimeout(() => {
+                document.getElementsByClassName("fancybox-content")[0].scrollTop = 0
+                $('.fancybox-inner').fadeIn(200);
+                instance.update();
+            }, 450);
+        }
+    })
+
+}
+
+
 $(document).ready(function () {
     // Luôn luôn chậy polyfill cho thuôc tính object-fit: cover trên các phiên bản IE >= 9
     objectFitImages("img.object-fit-cover");
@@ -290,6 +304,7 @@ $(document).ready(function () {
     _toggle_button_menu();
     showMenuMobile();
     closeMenuMobile();
+    fixScroll();
 })
 
 $(window).on('scroll', function () {
