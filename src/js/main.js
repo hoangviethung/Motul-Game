@@ -8,11 +8,14 @@ $(document).on('click', '.start-video', function () {
 // Get youtube ID from URL
 const getYoutubeID = (e) => {
     var url = $(e).attr("data-url");
-
-    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
-    var match = url.match(regExp);
-    if (match && match[7].length == 11) {
-        return match[7];
+    if (url !== undefined) {
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+        var match = url.match(regExp);
+        if (match && match[7].length == 11) {
+            return match[7];
+        } else {
+            return false;
+        }
     } else {
         return false;
     }
@@ -28,7 +31,7 @@ var player, player_1, player_2;
 
 function onYouTubeIframeAPIReady() {
 
-    if ($(".home_banner #video").length > 0) {
+    if ($("#video").length > 0) {
         let id = getYoutubeID(".home_banner #video");
         player = new YT.Player('video', {
             height: '390',
@@ -46,7 +49,7 @@ function onYouTubeIframeAPIReady() {
         });
     }
 
-    if ($(".list-same-item #player_1").length > 0) {
+    if ($("#player_1").length > 0) {
         let id_1 = getYoutubeID("#player_1");
         player_1 = new YT.Player('player_1', {
             height: '244',
@@ -64,7 +67,7 @@ function onYouTubeIframeAPIReady() {
 
     }
 
-    if ($(".list-same-item #player_2").length > 0) {
+    if ($("#player_2").length > 0) {
         let id_2 = getYoutubeID("#player_2");
         player_2 = new YT.Player('player_2', {
             height: '244',
