@@ -188,10 +188,10 @@ function voteRating() {
     $('[data-vote]').each(function () {
         var vote = $(this).attr('data-vote');
         if (vote == 'true') {
-            $(this).find('.heart-full').toggleClass('active');
+            $(this).find('.heart-full').addClass('active');
         }
         $(this).on('click', function () {
-            $(this).find('.heart-full').toggleClass('active');
+            $(this).find('.heart-full').addClass('active');
             if ($(this).find('.heart-full').hasClass('active')) {
                 vote = true;
             } else {
