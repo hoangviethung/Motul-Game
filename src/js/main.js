@@ -145,7 +145,20 @@ function bannerSlider() {
         navigation: {
             nextEl: '.home_banner .swiper-button-next',
             prevEl: '.home_banner .swiper-button-prev',
-        },
+		},
+		on:{
+			init: function(){
+				$('.home_banner .swiper-slide').each(function(){
+					$(this).height($(this).width()/(1920/920))
+				})
+			},
+			
+			reszie: function(){
+				$('.home_banner .swiper-slide').each(function(){
+					$(this).height($(this).width()/(1920/920))
+				})
+			}
+		}
     })
 
     swiper.on("slideChangeTransitionEnd", function () {
