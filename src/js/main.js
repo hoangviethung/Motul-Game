@@ -99,17 +99,17 @@ function onPlayerReady(event) {
     }
 }
 
-function stopVideo() {
-    player.stopVideo();
-}
+// function stopVideo() {
+//     player.stopVideo();
+// }
 
-function pauseVideo() {
-    player.pauseVideo();
-}
+// function pauseVideo() {
+//     player.pauseVideo();
+// }
 
-function playVideo() {
-    player.playVideo();
-}
+// function playVideo() {
+//     player.playVideo();
+// }
 // END youtube API
 
 

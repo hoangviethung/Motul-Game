@@ -10,6 +10,10 @@ export const copyImage = () => {
 	return src("./src/img/**/**.{svg,png,jpg,jpeg,gif}")
 		.pipe(dest("dist/img"))
 }
+export const copyVideo = () => {
+	return src("./src/videos/**/**")
+		.pipe(dest("dist/videos"))
+}
 
 export const copyFonts = () => {
 	let glob = JSON.parse(readFileSync("_vendor.json"));
@@ -30,5 +34,6 @@ export const copyFavicon = () => {
 module.exports = {
 	copyFonts,
 	copyImage,
+	copyVideo,
 	copyFavicon
 };
