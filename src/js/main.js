@@ -198,7 +198,7 @@ $("#imgInp").change(function () {
 
 // VOTED
 function voteRating() {
-	$('.item-detail [data-vote]').each(function () {
+	$('[data-vote]').each(function () {
 		var vote = $(this).attr('data-vote');
 		if (vote == 'true') {
 			$(this).find('.heart-full').addClass('active');
