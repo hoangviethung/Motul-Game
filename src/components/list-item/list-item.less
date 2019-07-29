@@ -19,6 +19,9 @@
 
 				.box-img {
 					display : flex;
+					height  : 560px;
+					overflow: hidden;
+
 					img {
 						width : 100%;
 						height: auto;
@@ -148,6 +151,10 @@
 		.list-post {
 			.item {
 				figure {
+					.box-img {
+						height: unset;
+					}
+
 					figcaption {
 						flex-wrap: wrap;
 
@@ -170,9 +177,8 @@
 						// }
 
 						.voted {
-							position   : static;
-							margin-left: auto;
-							align-self : center;
+							position  : static;
+							align-self: center;
 
 							span {
 								top: 0;
