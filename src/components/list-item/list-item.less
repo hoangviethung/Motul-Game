@@ -52,7 +52,6 @@
 						position: absolute;
 						cursor  : pointer;
 						right   : 40px;
-						height  : 30px;
 
 						.heart-full,
 						.heart-nofull {
@@ -151,8 +150,11 @@
 			.item {
 				figure {
 					figcaption {
+						flex-wrap: wrap;
+
 						.content {
-							width: 80%;
+							width        : 100%;
+							margin-bottom: 10px;
 
 							h5 {
 								font-size: 15px;
@@ -163,8 +165,15 @@
 							}
 						}
 
+						.icon-vote {
+							position : static;
+							font-size: 10px;
+						}
+
 						.voted {
-							width: 20%;
+							position   : static;
+							margin-left: auto;
+							align-self : center;
 
 							span {
 								top: 0;
