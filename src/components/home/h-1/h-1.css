@@ -1,0 +1,179 @@
+.home-section-1 {
+  position: relative;
+  background: #F2F2F2;
+  padding: 115px 0;
+}
+.home-section-1::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 721px;
+  height: 1247px;
+  pointer-events: none;
+  background-image: url(../img/bg-before.png);
+}
+.home-section-1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 678px;
+  height: 989px;
+  pointer-events: none;
+  background-image: url(../img/bg-before.png);
+  object-fit: cover;
+}
+.home-section-1 .title-main {
+  margin: 0 auto;
+}
+.home-section-1 .title-main figure img {
+  max-width: 457px;
+  max-height: 111px;
+}
+.home-section-1 .title-main figure figcaption h1 {
+  font-weight: 900;
+  font-size: 95px;
+  color: #ED1D24;
+}
+.home-section-1 .title-main figure figcaption p {
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+}
+.home-section-1 .list-item-about-racetrack {
+  display: flex;
+  align-items: center;
+  margin: 60px 0;
+}
+.home-section-1 .list-item-about-racetrack .item-about-racetrack {
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+.home-section-1 .list-item-about-racetrack .item-about-racetrack:hover {
+  transform: scale(1.05);
+}
+.home-section-1 .list-item-about-racetrack .item-about-racetrack figure {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  position: relative;
+  padding: 10px;
+  background-image: linear-gradient(to bottom, #191919, #ed1d24);
+}
+.home-section-1 .list-item-about-racetrack .item-about-racetrack figure .box-img img {
+  width: 100%;
+  height: auto;
+}
+.home-section-1 .list-item-about-racetrack .item-about-racetrack figure figcaption {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px 23px 72px;
+  position: relative;
+  height: 400px;
+}
+.home-section-1 .list-item-about-racetrack .item-about-racetrack figure figcaption::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bg-page.png);
+}
+.home-section-1 .list-item-about-racetrack .item-about-racetrack figure figcaption h5 {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 800;
+  font-size: 24px;
+  color: #ED1D24;
+  margin-bottom: 25px;
+}
+.home-section-1 .list-item-about-racetrack .item-about-racetrack figure figcaption p {
+  color: #fff;
+  font-size: 18px;
+}
+.home-section-1 .list-item-about-racetrack .item-about-racetrack figure figcaption p span {
+  color: #ED1D24;
+  font-weight: 700;
+}
+.home-section-1 .list-item-about-racetrack .item-about-racetrack figure figcaption .list-info-racetrack {
+  font-size: 18px;
+}
+.home-section-1 .list-item-about-racetrack .item-about-racetrack figure figcaption .list-info-racetrack .item {
+  position: relative;
+  padding-left: 20px;
+  color: #fff;
+}
+.home-section-1 .list-item-about-racetrack .item-about-racetrack figure figcaption .list-info-racetrack .item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  left: 0;
+  top: 8px;
+  background: #FFF;
+}
+.home-section-1 .description-main {
+  display: block;
+  width: 100%;
+}
+.home-section-1 .description-main figure .box-img {
+  display: flex;
+  justify-content: center;
+}
+.home-section-1 .description-main figure .box-img img {
+  max-width: 800px;
+  max-height: 265px;
+}
+.home-section-1 .description-main figure figcaption {
+  text-align: center;
+}
+.home-section-1 .description-main figure figcaption h3 {
+  font-weight: 900;
+  font-size: 40px;
+  color: #000000;
+}
+.home-section-1 .description-main figure figcaption h3 span {
+  font-size: 45px;
+  color: #ED1D24;
+}
+@media (max-width: 1024px) {
+  .home-section-1 {
+    padding: 45px 20px;
+  }
+  .home-section-1:after,
+  .home-section-1:before {
+    display: none;
+  }
+  .home-section-1 .title-main figure img {
+    width: 180px;
+    height: 44px;
+  }
+  .home-section-1 .title-main figure figcaption h1 {
+    font-size: 24px;
+  }
+  .home-section-1 .list-item-about-racetrack .item-about-racetrack {
+    padding-bottom: 30px;
+  }
+  .home-section-1 .list-item-about-racetrack .item-about-racetrack figure figcaption h5 {
+    color: #fff;
+  }
+  .home-section-1 .list-item-about-racetrack .item-about-racetrack figure figcaption p {
+    font-size: 16px;
+  }
+  .home-section-1 .list-item-about-racetrack .item-about-racetrack figure figcaption .list-info-racetrack {
+    font-size: 16px;
+  }
+  .home-section-1 .list-item-about-racetrack .item-about-racetrack:last-child {
+    padding-bottom: 0;
+  }
+  .home-section-1 .description-main figure .box-img img {
+    max-width: 100%;
+  }
+  .home-section-1 .description-main figure figcaption h3 {
+    font-size: 24px;
+  }
+  .home-section-1 .description-main figure figcaption h3 span {
+    font-size: 24px;
+  }
+}
