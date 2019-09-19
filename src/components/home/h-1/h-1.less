@@ -182,14 +182,22 @@
 
 		.title-main {
 			figure {
+				text-align: center;
+
 				img {
-					width: 180px;
-					height: 44px;
+					width: unset;
+					height: unset;
+					margin-bottom: 20px;
 				}
 
 				figcaption {
 					h1 {
 						font-size: 24px;
+						margin-bottom: 10px;
+					}
+
+					p {
+						font-size: 16px;
 					}
 				}
 			}
@@ -235,6 +243,53 @@
 
 						span {
 							font-size: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 767.98px) {
+	.home-section-1 {
+		.title-main {
+			figure {
+
+				img {
+					width: 70%;
+					height: 70%;
+				}
+
+				figcaption {
+					p {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+
+		.list-item-about-racetrack {
+			.item-about-racetrack {
+
+				figure {
+					figcaption {
+						p {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+
+		.description-main {
+			figure {
+				figcaption {
+					h3 {
+						font-size: 18px;
+
+						span {
+							font-size: 18px;
 						}
 					}
 				}
