@@ -48,7 +48,7 @@
 }
 .home-section-1 .list-item-about-racetrack .item-about-racetrack {
   cursor: pointer;
-  z-index: 100;
+  z-index: 50;
 }
 .home-section-1 .list-item-about-racetrack .item-about-racetrack:hover figure {
   transform: scale(1.05);
