@@ -58,10 +58,12 @@
 
 		.item-about-racetrack {
 			cursor: pointer;
-			transition: .3s all ease-in-out;
+			z-index: 100;
 
 			&:hover {
-				transform: scale(1.05);
+				figure {
+					transform: scale(1.05);
+				}
 			}
 
 			figure {
@@ -69,6 +71,7 @@
 				position: relative;
 				padding: 10px;
 				background-image: linear-gradient(to bottom, rgba(25, 25, 25, 1), rgba(237, 29, 36, 1));
+				transition: .3s all ease-in-out;
 
 				.box-img {
 					img {
