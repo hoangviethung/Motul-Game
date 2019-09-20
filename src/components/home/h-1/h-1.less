@@ -292,12 +292,29 @@
 						margin-bottom: 20px;
 
 						h4 {
+							display: inline-block;
 							font-size: 18px;
 							margin-bottom: 10px;
 						}
 
 						h5 {
 							font-size: 20px;
+						}
+					}
+
+					.img-giaithuong {
+						margin-top: 20px;
+						justify-content: center;
+
+						img {
+							&:first-child {
+								height: 200px;
+							}
+
+							&:last-child {
+								width: 50%;
+								margin-left: 0;
+							}
 						}
 					}
 				}
@@ -331,6 +348,21 @@
 					figcaption {
 						p {
 							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+
+
+		.description-main {
+			figure {
+				figcaption {
+					.img-giaithuong {
+						img {
+							&:first-child {
+								height: 130px;
+							}
 						}
 					}
 				}
